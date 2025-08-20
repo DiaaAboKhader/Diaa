@@ -14,13 +14,14 @@ public class MainActivity10 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main10);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
-        ImageButton buttonProfile = findViewById(R.id.button_profile);
+        ImageButton buttonHome1 = findViewById(R.id.button_home);
+        ImageButton buttonProfile1 = findViewById(R.id.button_profile);
+
+        buttonHome1.setImageResource(R.drawable.mdi_house);
+        buttonProfile1.setImageResource(R.drawable.frame);
+
+        ImageButton buttonProfile = findViewById(R.id.button_home);
         buttonProfile.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity10.this, MainActivity7.class);
             startActivity(intent);
@@ -38,7 +39,7 @@ public class MainActivity10 extends AppCompatActivity {
             Intent intent = new Intent(MainActivity10.this, MainActivity9.class);
             startActivity(intent);
         });
-        ImageButton buttonHome = findViewById(R.id.button_home);
+        ImageButton buttonHome = findViewById(R.id.button_profile);
         buttonHome.setOnClickListener(v -> {
         });
     }

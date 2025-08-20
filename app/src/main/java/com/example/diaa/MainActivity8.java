@@ -3,47 +3,59 @@ package com.example.diaa;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity8 extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main8);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-        ImageButton goToPage7Btn = findViewById(R.id.button_profile);
-        goToPage7Btn.setOnClickListener(v -> {
+
+        ImageButton buttonHome1 = findViewById(R.id.button_home);
+        ImageButton buttonCart1 = findViewById(R.id.button_cart);
+
+        buttonHome1.setImageResource(R.drawable.mdi_house);
+        buttonCart1.setImageResource(R.drawable.mdi_light_cart);
+
+        GridView gvCart = findViewById(R.id.gv_products);
+
+        String[] names = {"Italian bedroom", "American sofa", "Dining table", "Single sofa"};
+        int[] images = {R.drawable.start, R.drawable.thirdhome, R.drawable.homefifth, R.drawable.secondhome};
+
+        CartAdapter adapter = new CartAdapter(this, names, images);
+        gvCart.setAdapter(adapter);
+
+        ImageButton buttonHome = findViewById(R.id.button_home);
+        buttonHome.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity8.this, MainActivity7.class);
             startActivity(intent);
         });
-        ImageButton goToPage9Btn = findViewById(R.id.button_star);
-        goToPage9Btn.setOnClickListener(v -> {
+
+        ImageButton buttonStar = findViewById(R.id.button_star);
+        buttonStar.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity8.this, MainActivity9.class);
             startActivity(intent);
         });
-        ImageButton goToPage10Btn = findViewById(R.id.button_home);
-        goToPage10Btn.setOnClickListener(v -> {
+
+        ImageButton buttonProfile = findViewById(R.id.button_profile);
+        buttonProfile.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity8.this, MainActivity10.class);
             startActivity(intent);
         });
-        ImageButton buttonProfile = findViewById(R.id.button_cart);
-        buttonProfile.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity8.this, MainActivity8.class);
-            startActivity(intent);
+
+        ImageButton buttonCart = findViewById(R.id.button_cart);
+        buttonCart.setOnClickListener(v -> {
         });
-        Button button20 = findViewById(R.id.button20);
-        button20.setOnClickListener(v -> {
+
+        Button btn = findViewById(R.id.btn_continue);
+        btn.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity8.this, MainActivity12.class);
             startActivity(intent);
         });
+
     }
 }

@@ -1,0 +1,78 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white0">
+
+        <!-- الصورة -->
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:src="@drawable/home"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="10dp" />
+
+        <!-- صف الأيقونات -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            >
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/modern"
+                android:layout_marginTop="18dp"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:id="@+id/button7"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/heart"
+                android:background="@null"
+                android:layout_marginStart="5dp"/>
+
+            <ImageButton
+                android:id="@+id/button8"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/plas"
+                android:background="@null"
+                android:layout_marginStart="5dp"/>
+
+            <ImageButton
+                android:id="@+id/button9"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/watch"
+                android:background="@null"
+                android:layout_marginStart="5dp"/>
+        </LinearLayout>
+
+        <!-- السعر تحتيهم -->
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/many"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginBottom="3dp"/>
+
+    </LinearLayout>
+
+
+</ScrollView>
+

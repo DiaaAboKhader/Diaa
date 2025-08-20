@@ -1,0 +1,57 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_margin="10dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:weightSum="5"
+    android:layoutDirection="ltr"
+    android:background="@color/white2"
+    android:elevation="6dp">
+
+    <ImageButton
+        android:id="@+id/button_home"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/vector"
+        android:background="@null"
+        android:scaleType="centerInside" />
+
+    <ImageButton
+        android:id="@+id/button_cart"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/groupa"
+        android:background="@null"
+        android:scaleType="centerInside" />
+
+    <ImageButton
+        android:id="@+id/button_search"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/pagethree"
+        android:background="@null"
+        android:scaleType="centerInside" />
+
+    <ImageButton
+        android:id="@+id/button_star"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/pagefour"
+        android:background="@null"
+        android:scaleType="centerInside" />
+
+    <ImageButton
+        android:id="@+id/button_profile"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/pagefive"
+        android:background="@null"
+        android:scaleType="centerInside" />
+</LinearLayout>

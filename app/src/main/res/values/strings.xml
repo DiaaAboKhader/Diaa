@@ -3,7 +3,6 @@
     <string name="start">modern contemporary house</string>
     <string name="start2">Home furniture design for the modern contemporary home at the best prices</string>
     <string name="start3">Porem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum. </string>
-
     <string name="fill">Fill your home with modern, contemporary furniture</string>
     <string name="log">Log in</string>
     <string name="log1">Log in?</string>
@@ -11,7 +10,7 @@
     <string name="email">Email</string>
     <string name="pas">Pasword</string>
     <string name="user">Uesr Name</string>
-    <string name="or">____________________________or____________________________</string>
+    <string name="or">__________________________or__________________________</string>
     <string name="log2">forget password?</string>
     <string name="ferst">Ferst Name</string>
     <string name="last">Last Name</string>
@@ -46,5 +45,8 @@
     <string name="successful">Your Order Was Successful</string>
     <string name="back_to_home">Back to Home</string>
     <string name="order">Order Delivery Address</string>
+
+
+
 
 </resources>

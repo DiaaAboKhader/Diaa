@@ -18,11 +18,13 @@ public class MainActivity12 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main12);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        ImageButton buttonHome1 = findViewById(R.id.button_home);
+        ImageButton buttonCart1 = findViewById(R.id.button_cart);
+
+        buttonHome1.setImageResource(R.drawable.mdi_house);
+        buttonCart1.setImageResource(R.drawable.mdi_light_cart);
+
 
         Button button36 = findViewById(R.id.button36);
         button36.setOnClickListener(v -> {

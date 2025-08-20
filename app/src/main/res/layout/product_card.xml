@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rv_"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white0"
+    android:layout_margin="10dp"
+    >
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="175dp"
+        android:layout_height="125dp"
+        android:src="@drawable/home"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:padding="5dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/offers1"
+        android:layout_toRightOf="@id/imageView5"
+        />
+
+    <TextView
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="$499"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:scaleType="fitXY"
+        android:background="@null"
+        android:layout_toRightOf="@id/imageView5"
+        android:layout_below="@+id/textView9"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <ImageButton
+        android:id="@+id/button8"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/plas"
+        android:background="@null"
+        android:scaleType="fitXY"
+
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@+id/textView9"
+        android:layout_marginTop="50dp"
+        />
+
+    <GridView
+        android:id="@+id/gv_products"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:stretchMode="columnWidth"
+        />
+
+</RelativeLayout>

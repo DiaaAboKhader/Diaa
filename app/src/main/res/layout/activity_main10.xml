@@ -1,64 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
+    android:orientation="vertical"
     tools:context=".MainActivity10">
 
-    <View
-        android:id="@+id/view"
+    <include
+        layout="@layout/top_bar"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/white0"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="10dp" />
-    <ImageButton
-        android:id="@+id/button_left"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:backgroundTint="@color/black"
-        android:background="@null"
-        android:src="@drawable/solar_sort_broken"
-        android:scaleType="centerInside"
-        android:contentDescription="زر يسار"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints" />
+        android:layout_height="50dp" />
 
-    <ImageButton
-        android:id="@+id/button11"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="30dp"
-        android:backgroundTint="@color/black"
-        android:background="@null"
-        android:src="@drawable/mdi_light_cart"
-        android:scaleType="centerInside"
-        android:contentDescription="زر يمين"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        tools:ignore="MissingConstraints"
-        />
-    <ImageView
-        android:id="@+id/imageView18"
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/ellipse"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
+        android:src="@drawable/deya"
+        app:civ_border_width="3dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        app:civ_border_color="#FF000000"/>
 
     <TextView
         android:id="@+id/textView27"
@@ -75,6 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView18"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="20dp" />
+
     <TextView
         android:id="@+id/textView29"
         android:layout_width="match_parent"
@@ -90,6 +56,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView27"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="20dp" />
+
     <TextView
         android:id="@+id/textView30"
         android:layout_width="match_parent"
@@ -176,74 +143,11 @@
         app:layout_constraintTop_toBottomOf="@+id/button33"
         tools:layout_editor_absoluteX="20dp" />
 
-
-    <LinearLayout
-        android:id="@+id/bottom_navigation"
+    <include
+        layout="@layout/bottom_nav"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:background="#E0E0E0"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints">
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        />
 
-        <ImageButton
-            android:id="@+id/button_profile"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="4dp"
-            android:src="@drawable/mdi_house"
-            android:backgroundTint="@color/black"
-            android:scaleType="centerInside"
-            android:background="@null" />
-
-        <ImageButton
-            android:id="@+id/button_cart"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="4dp"
-            android:src="@drawable/pagetwo"
-            android:backgroundTint="@color/black"
-            android:scaleType="centerInside"
-            android:background="@null" />
-
-        <ImageButton
-            android:id="@+id/button_search"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="4dp"
-            android:src="@drawable/pagethree"
-            android:backgroundTint="@color/black"
-            android:scaleType="centerInside"
-            android:background="@null" />
-
-        <ImageButton
-            android:id="@+id/button_star"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="4dp"
-            android:src="@drawable/pagefour"
-            android:backgroundTint="@color/black"
-            android:scaleType="centerInside"
-            android:background="@null" />
-
-        <ImageButton
-            android:id="@+id/button_home"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="4dp"
-            android:src="@drawable/groupone"
-            android:backgroundTint="@color/black"
-            android:scaleType="centerInside"
-            android:background="@null" />
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

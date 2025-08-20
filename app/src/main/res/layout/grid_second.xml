@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layoutDirection="ltr"
+    android:background="@color/white0">
+
+    <!-- ScrollView أفقي -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:orientation="horizontal"
+        android:background="@color/white0">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/horizontal_container">
+
+            <!-- الكارد الأول -->
+            <FrameLayout
+                android:layout_width="170dp"
+                android:layout_height="220dp"
+                android:background="@color/white0">
+
+                <ImageView
+                    android:layout_width="170dp"
+                    android:layout_height="220dp"
+                    android:src="@drawable/home"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hom1"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:layout_gravity="top|start"
+                    android:layout_margin="8dp" />
+
+                <ImageButton
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/watch"
+                    android:background="@null"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="8dp" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <!-- هنا يمكن إضافة الكرت الجديد برمجياً -->
+</LinearLayout>
